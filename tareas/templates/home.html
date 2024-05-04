@@ -1,0 +1,29 @@
+{% extends 'base.html' %}
+
+{% load static %}
+
+{% block content %}
+
+<main class="container py-4">
+
+    <section class="card card-body">
+
+        <img src="{% static 'images\descargazf.png' %}" alt="descargazf" width="400 " class="d-flex align-self-center mr-3">
+
+        <h1 class="display-1 text-center">Datacenter Operation</h1>
+        
+        <br>
+        <p class="align-self-center mb-5"><strong>Mejoramos contigo, cada dia..</strong>.</p> 
+        
+        
+        <div class="text-center">
+            <a class="btn btn-success" href="/login/">Iniciar Sesion</a>
+            <a class="btn btn-success" href="/register/">Registrse Aqui!!</a>
+           
+
+
+        </div>
+    </section>
+
+</main>
+{% endblock %}

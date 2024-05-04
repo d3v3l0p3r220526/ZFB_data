@@ -1,0 +1,27 @@
+{% extends 'base.html' %}
+
+{% load static %}
+
+{% block content %}
+
+{% load crispy_forms_tags %}
+
+
+
+<form action="" method="post">
+    {% csrf_token %}
+
+    <div class="card mx-auto" style="width: 30rem;">
+      <div class="card-body">
+        <img src="{% static 'images\descargazf.png' %}" alt="descargazf" width="200 " class="d-flex align-self-center mr-3">
+
+        <h5 class="card-title">Ingrese sus Credenciales</h5>
+        {{ form | crispy }}
+        <a href="{% url 'home' %}" class="card-link">Inicio</a>
+        <a href="{% url 'register' %}" class="card-link">Registrarse</a>
+        <button class="btn btn-sm btn-success float-end" type="submit">Iniciar Sesión</button>
+      </div>
+    </div>
+</form>
+
+{% endblock %}
